@@ -10,3 +10,7 @@ RUN sed -i --follow-symlinks "s/^UMASK\\>.*/UMASK		027/gi" "/etc/login.defs"
 RUN echo "umask 027" >> /etc/profile
 
 RUN bootc container lint
+
+LABEL org.opencontainers.image.source="https://github.com/ferrory/fedora-bootc-gitops-hardened"
+LABEL org.opencontainers.image.description="My Fedora Bootc GitOps hardened bootable container"
+LABEL org.opencontainers.image.license="MIT"
